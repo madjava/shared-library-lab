@@ -1,4 +1,4 @@
-def call(String repo, String message) {
+def call(Map config = [:]) {
 // send to email
 emailext (
   subject: "${config.message}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
